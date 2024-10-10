@@ -1,0 +1,116 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #5963dc, #a77adf);
+}
+
+/* Container Styling */
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+h1 {
+  font-size: 35px; /* Ukuran default */
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Input Styling */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px; /* Menambah jarak antara label dan input */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px; /* Ukuran font default */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Button Styling */
+.btn-group button {
+  background: linear-gradient(135deg, #5963dc, #a77adf);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  font-size: 16px; /* Ukuran font default */
+  font-weight: bold; /* Bold untuk tombol */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-group button:hover {
+  background: linear-gradient(135deg, #a77adf, #5963dc);
+}
+
+/* Result Styling */
+.result {
+  margin-top: 20px;
+  font-size: 20px; /* Ukuran font default */
+  font-weight: bold;
+  color: #fff;
+  word-wrap: break-word; /* Mengaktifkan pembungkusan */
+  max-width: 100%; /* Menjaga dalam lebar kontainer */
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px; /* Mengurangi ukuran font pada layar kecil */
+  }
+  .input-group input {
+    font-size: 14px; /* Mengurangi ukuran font input */
+  }
+  .btn-group button {
+    font-size: 14px; /* Mengurangi ukuran font tombol */
+  }
+  .result {
+    font-size: 18px; /* Mengurangi ukuran font hasil */
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 24px; /* Mengurangi ukuran font pada layar yang lebih kecil */
+  }
+  .input-group input {
+    font-size: 12px; /* Mengurangi ukuran font input */
+  }
+  .btn-group button {
+    font-size: 12px; /* Mengurangi ukuran font tombol */
+  }
+  .result {
+    font-size: 16px; /* Mengurangi ukuran font hasil */
+  }
+}
