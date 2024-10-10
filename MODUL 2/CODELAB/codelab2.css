@@ -540,6 +540,21 @@ input {
     border: 1px solid #4b3b37;
     transform: scaleX(1);
   }
+
+  .overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
 }
 
 @media (max-width: 400px) {
@@ -718,5 +733,20 @@ input {
   .social-container a:hover::after {
     border: 1px solid #4b3b37;
     transform: scaleX(1);
+  }
+
+  .overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
   }
 }
