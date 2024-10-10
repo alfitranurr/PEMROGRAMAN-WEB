@@ -27,7 +27,7 @@ h1.title {
   font-size: 45px;
   line-height: 45px;
   margin: 0;
-  text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
+  text-shadow: 0 0 10px rgb(68, 54, 54);
 }
 
 p {
@@ -36,7 +36,7 @@ p {
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
-  text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
+  text-shadow: 0 0 10px rgb(68, 54, 54);
 }
 
 span {
@@ -62,29 +62,6 @@ a:hover {
   height: auto;
   align-items: center;
   justify-content: space-between;
-}
-
-@media (max-width: 600px) {
-  .content {
-    flex-direction: column; /* Ubah arah menjadi kolom pada layar kecil */
-    align-items: center; /* Rata kiri item */
-  }
-
-  .pass-link {
-    margin-top: 8px; /* Tambahkan margin untuk jarak */
-    margin-bottom: 8px;
-  }
-
-  .container {
-    width: 90%; /* Sesuaikan lebar kontainer untuk layar kecil */
-  }
-
-  button {
-    padding: 10px 20px; /* Mengurangi padding tombol */
-    font-size: 12px; /* Mengurangi ukuran font */
-    margin: 10px; /* Menjaga jarak antar tombol */
-    width: auto; /* Pastikan lebar tombol tidak tetap */
-  }
 }
 
 .content .checkbox {
@@ -384,4 +361,362 @@ input {
 
 .blinking-border {
   animation: blinkBorder 1s ease-in-out infinite; /* animasi berkedip */
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%; /* Sesuaikan lebar kontainer untuk layar kecil */
+    height: auto; /* Ubah tinggi kontainer agar lebih fleksibel */
+    padding: 20px; /* Tambahkan padding untuk kenyamanan */
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column; /* Ubah arah ke kolom */
+    align-items: flex-start; /* Menyusun elemen di sisi kiri */
+  }
+
+  form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 35px;
+    height: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 30px;
+  }
+
+  h1.title {
+    font-size: 40px;
+    line-height: 45px;
+    margin: 0;
+    text-shadow: 0 0 10px rgb(68, 54, 54);
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    text-shadow: 0 0 10px rgb(68, 54, 54);
+  }
+
+  button {
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #4b3b37;
+    background-color: #4b3b37;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px;
+    padding: 11px 45px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    transition: 0.3s ease-in-out;
+  }
+
+  button:hover {
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button.ghost {
+    background-color: rgba(225, 225, 225, 0.2);
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+  button.ghost i {
+    position: absolute;
+    opacity: 0;
+    transition: o.3s ease-in-out;
+  }
+
+  button.ghost i.register {
+    right: 70px;
+  }
+
+  button.ghost i.login {
+    left: 70px;
+  }
+
+  button.ghost:hover i.register {
+    right: 20px;
+    opacity: 1;
+    top: 32%;
+  }
+
+  button.ghost:hover i.login {
+    left: 20px;
+    opacity: 1;
+    top: 32%;
+  }
+
+  input {
+    background-color: #eee;
+    border-radius: 10px;
+    border: none;
+    padding: 9px 15px;
+    margin: 6px 0;
+    width: 100%;
+    border: 2px solid transparent; /* Awalnya border transparan */
+    transition: border-color 0.3s ease-in-out;
+    font-size: 12px;
+  }
+
+  .content input {
+    accent-color: #333;
+    width: 11px;
+    height: 11px;
+    cursor: pointer;
+  }
+
+  .content label {
+    font-size: 12px;
+    user-select: none;
+    padding-left: 6px;
+  }
+
+  a {
+    color: #333;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 10px -12px;
+    transition: 0.3s ease-in-out;
+  }
+
+  span {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .social-container {
+    margin: 12px 0;
+  }
+
+  .social-container a {
+    border: 2px solid #dddddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Menambahkan transisi untuk transform */
+  }
+
+  .social-container a:hover {
+    border: 2px solid #4b3b37;
+    cursor: pointer;
+    transform: scale(1.04); /* Membesarkan ukuran saat hover */
+  }
+
+  .social-container a::after {
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .social-container a:hover::after {
+    border: 1px solid #4b3b37;
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 95%; /* Lebar kontainer lebih sempit untuk layar sangat kecil */
+    height: auto; /* Ubah tinggi kontainer agar lebih fleksibel */
+    padding: 15px; /* Kurangi padding untuk ruang yang lebih baik */
+  }
+
+  form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 25px;
+    height: 100%;
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column; /* Ubah arah ke kolom */
+    align-items: flex-start; /* Menyusun elemen di sisi kiri */
+  }
+
+  h1 {
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 25px;
+  }
+
+  h1.title {
+    font-size: 33px;
+    line-height: 45px;
+    margin: 0;
+    text-shadow: 0 0 10px rgb(68, 54, 54);
+  }
+
+  p {
+    font-size: 10px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    text-shadow: 0 0 10px rgb(68, 54, 54);
+  }
+
+  button {
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #4b3b37;
+    background-color: #4b3b37;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 10px;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    transition: 0.3s ease-in-out;
+  }
+
+  button:hover {
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button.ghost {
+    background-color: rgba(225, 225, 225, 0.2);
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+  button.ghost i {
+    position: absolute;
+    opacity: 0;
+    transition: o.3s ease-in-out;
+  }
+
+  button.ghost i.register {
+    right: 70px;
+  }
+
+  button.ghost i.login {
+    left: 70px;
+  }
+
+  button.ghost:hover i.register {
+    right: 10px;
+    opacity: 1;
+    top: 32%;
+  }
+
+  button.ghost:hover i.login {
+    left: 10px;
+    opacity: 1;
+    top: 32%;
+  }
+
+  input {
+    background-color: #eee;
+    border-radius: 10px;
+    border: none;
+    padding: 7px 10px;
+    margin: 4px 0;
+    width: 100%;
+    border: 2px solid transparent; /* Awalnya border transparan */
+    transition: border-color 0.3s ease-in-out;
+    font-size: 10px;
+  }
+
+  .content input {
+    accent-color: #333;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+  }
+
+  .content label {
+    font-size: 10px;
+    user-select: none;
+    padding-left: 4px;
+  }
+
+  a {
+    color: #333;
+    font-size: 10px;
+    text-decoration: none;
+    margin: 15px -10px;
+    transition: 0.3s ease-in-out;
+  }
+
+  span {
+    font-size: 10px;
+    margin-top: 6px;
+  }
+
+  .social-container {
+    margin: 8px 0;
+  }
+
+  .social-container a {
+    border: 2px solid #dddddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1px;
+    height: 25px;
+    width: 25px;
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Menambahkan transisi untuk transform */
+  }
+
+  .social-container a:hover {
+    border: 2px solid #4b3b37;
+    cursor: pointer;
+    transform: scale(1.02); /* Membesarkan ukuran saat hover */
+  }
+
+  .social-container a::after {
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .social-container a:hover::after {
+    border: 1px solid #4b3b37;
+    transform: scaleX(1);
+  }
 }
