@@ -1,0 +1,218 @@
+/* Mode Gelap (Dark Mode) */
+:root {
+  --bg-color: #22252d;
+  --display-color: #292d36;
+  --key-color: #262933;
+  --key-hover-shadow: rgba(0, 0, 0, 0.2);
+  --operator-color: #eb6666;
+  --action-color: #26fed7;
+  --text-color: #fff;
+  --outside-bg: #f0f0f0; /* Light background outside calculator */
+}
+
+/* Mode Terang (Light Mode) */
+.light-theme {
+  --bg-color: #f0f0f0;
+  --display-color: #e5e5e5;
+  --key-color: #ddd;
+  --key-hover-shadow: rgba(0, 0, 0, 0.1);
+  --operator-color: #d9534f;
+  --action-color: #5bc0de;
+  --text-color: #333;
+  --outside-bg: #22252d; /* Dark gray background outside calculator */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--outside-bg);
+  transition: background-color 0.3s;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background-color: var(--bg-color);
+  width: 100%;
+  max-width: 450px;
+  min-height: 640px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.display {
+  min-height: 200px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: var(--text-color);
+  text-align: right;
+  flex: 1 1 0%;
+}
+
+.display .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.display .input {
+  width: 100%;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.display .output {
+  font-size: 3rem;
+  font-weight: 700;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.keys {
+  background-color: var(--display-color);
+  padding: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 1rem;
+  box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.2);
+}
+
+.keys .key {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  height: 0;
+  padding-top: 100%;
+  background-color: var(--key-color);
+  border-radius: 1rem;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.keys .key span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.keys .key:hover {
+  box-shadow: inset 0px 0px 8px var(--key-hover-shadow);
+}
+
+.keys .key.operator span {
+  color: var(--operator-color);
+}
+
+.keys .key.action span {
+  color: var(--action-color);
+}
+
+/* Tombol untuk mengganti tema */
+.theme-toggle {
+  margin: 1rem;
+}
+
+.label {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.inner {
+  background-color: #ffffff; /* Gunakan warna putih yang lebih kontras */
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* Tambahkan bayangan untuk memberikan efek kedalaman */
+}
+
+.switch {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #26fed7; /* Warna saat di mode gelap */
+  border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+}
+
+/* Hover effect for the toggle switch */
+.switch:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan lebih gelap saat hover */
+}
+
+.checkbox:checked + .label .switch {
+  transform: translateX(26px);
+  background-color: #5bc0de; /* Ubah warna menjadi #5bc0de saat di mode terang */
+}
+
+.checkbox:checked + .label .inner {
+  background-color: #22252d; /* Ubah menjadi warna hitam untuk tema terang */
+}
+
+/* Highlight effect for light theme */
+.light-theme .switch {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk tema terang */
+}
+
+@media (max-width: 400px) {
+  .display .input {
+    font-size: 1rem; /* Ukuran font lebih kecil untuk input */
+  }
+
+  .display .output {
+    font-size: 2rem; /* Ukuran font lebih kecil untuk output */
+  }
+
+  .keys .key span {
+    font-size: 1.5rem; /* Ukuran font lebih kecil untuk tombol */
+  }
+}
+
+@media (max-width: 300px) {
+  .display .input {
+    font-size: 0.5rem; /* Ukuran font lebih kecil untuk input */
+  }
+
+  .display .output {
+    font-size: 1rem; /* Ukuran font lebih kecil untuk output */
+  }
+
+  .keys .key span {
+    font-size: 1rem; /* Ukuran font lebih kecil untuk tombol */
+  }
+}
