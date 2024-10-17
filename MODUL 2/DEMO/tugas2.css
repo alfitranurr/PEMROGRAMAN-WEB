@@ -4,10 +4,10 @@
 }
 
 :root {
-  --background: #000430;
-  --secodaryBackground: #171c48;
-  --text: #fff;
-  --purple: #828dff;
+  --background: #000000;
+  --secodaryBackground: #147997;
+  --text: #ffffff;
+  --telurAsin: #3ea5c5;
   --teal: #24feee;
 }
 
@@ -26,9 +26,9 @@ body {
 }
 
 .stats-container {
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
-  border: 2px solid var(--purple);
+  border: 4px solid var(--telurAsin);
   display: flex;
   justify-content: space-between;
   gap: 50px;
@@ -58,7 +58,7 @@ body {
 #numbers {
   width: 100px;
   height: 100px;
-  background-color: var(--purple);
+  background-color: var(--telurAsin);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +78,7 @@ input {
   flex: 1;
   padding: 16px;
   background-color: var(--secodaryBackground);
-  border: 1px solid var(--purple);
+  border: 1px solid var(--telurAsin);
   border-radius: 10px;
   outline: none;
   color: var(--text);
@@ -93,7 +93,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--purple);
+  background-color: var(--telurAsin);
   color: var(--text);
   font-size: 30px;
   font-weight: bold;
@@ -105,6 +105,7 @@ button {
   flex-direction: column;
   gap: 10px;
   margin-top: 30px;
+  margin-right: 15px;
   width: 100%;
   list-style: none;
 }

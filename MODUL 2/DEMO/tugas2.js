@@ -36,7 +36,6 @@ const toggleTaskComplete = (index) => {
   saveTasks();
 };
 
-// Fungsi untuk menghapus tugas
 const deleteTask = (index) => {
   tasks.splice(index, 1);
   updateTasksList();
@@ -44,12 +43,10 @@ const deleteTask = (index) => {
   saveTasks();
 };
 
-// Fungsi untuk mengedit tugas
 const editTask = (index) => {
   const taskInput = document.getElementById("taskInput");
   taskInput.value = tasks[index].text;
 
-  // Hapus tugas yang sedang diedit dari daftar dan update tampilan
   tasks.splice(index, 1);
   updateTasksList();
   updateStats();
