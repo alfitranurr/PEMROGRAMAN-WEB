@@ -1,0 +1,102 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #e9ecef;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #495057;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #80bdff;
+  outline: none;
+}
+
+input[type="submit"],
+button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  text-align: left;
+  color: #495057;
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e2e6ea;
+}
+
+/* Additional styling for edit form */
+#edit-form input[type="text"] {
+  margin-right: 5px;
+}
+
+#edit-form input[type="text"] {
+  margin-right: 10px; /* Space between fields */
+  padding: 8px; /* Better touch target */
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 14px; /* Consistent font size for inline fields */
+}
