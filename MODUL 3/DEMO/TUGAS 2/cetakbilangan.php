@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program Bilangan</title>
     <style>
-        /* Mengatur tampilan agar berada di tengah halaman */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -51,10 +50,8 @@
                 }
             }
         }
-
-        // Masukkan nilai untuk $n secara manual
         $n = 30; // Ganti dengan nilai yang kamu inginkan
-        cetakBilangan($n);
+        cetakBilangan(n: $n);
         ?>
     </div>
 </body>

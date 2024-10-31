@@ -1,4 +1,6 @@
 <?php
+
+date_default_timezone_set('Asia/Jakarta'); // Atur zona waktu sesuai kebutuhan
 require_once 'src/Book.php';
 require_once 'src/Library.php';
 require_once 'src/Traits.php';
@@ -10,7 +12,7 @@ use Library\Author;
 session_start();
 
 $library = isset($_SESSION['library']) ? $_SESSION['library'] : new Library();
-$_SESSION['library'] = $library;
+$_SESSION['library'] = $library; // jaga data yang sudah ada
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['delete_index'])) {
@@ -73,6 +75,8 @@ $books = $library->getBooks();
             <br>
             <input type="submit" value="Add Book">
         </form>
+
+        <button onclick="window.location.href='view_books.php'">View All Books</button> <!-- Button to view all books -->
 
         <?php if (!empty($books)): ?>
             <h2>Book List</h2>
