@@ -1,93 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login/Registration Form</title>
-    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
-    <link rel="stylesheet" href="codelab2.css" />
+    <title>Contoh jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #myDiv {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 100px; /* Vertically center text */
+        margin: 20px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container" id="container">
-      <div class="form-container register-container">
-        <form action="#">
-          <h1>Register Here</h1>
-          <input type="text" placeholder="Name" />
-          <span class="error-message"></span>
-          <input type="email" placeholder="Email" />
-          <span class="error-message"></span>
-          <input type="password" placeholder="Password" />
-          <span class="error-message"></span>
-          <button>Register</button>
-          <span>or use your account</span>
-          <div class="social-container">
-            <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
-            <a href="#" class="social"><i class="lni lni-google"></i></a>
-            <a href="#" class="social"
-              ><i class="lni lni-linkedin-original"></i
-            ></a>
-          </div>
-        </form>
-      </div>
+    <div id="myDiv">Klik Saya!</div>
+    <button id="changeTextButton">Ubah Teks</button>
 
-      <div class="form-container login-container">
-        <form action="#">
-          <h1>Login Here</h1>
-          <input type="email" placeholder="Email" />
-          <span class="error-message"></span>
-          <input type="password" placeholder="Password" />
-          <span class="error-message"></span>
-          <div class="content">
-            <div class="checkbox">
-              <input type="checkbox" name="checkbox" id="checkbox" />
-              <label>Remember me</label>
-            </div>
-            <div class="pass-link">
-              <a href="#">Forgot Password?</a>
-            </div>
-          </div>
-          <button>Login</button>
-          <span>or use your account</span>
-          <div class="social-container">
-            <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
-            <a href="#" class="social"><i class="lni lni-google"></i></a>
-            <a href="#" class="social"
-              ><i class="lni lni-linkedin-original"></i
-            ></a>
-          </div>
-        </form>
-      </div>
-
-      <div class="overlay-container">
-        <div class="overlay">
-          <div class="overlay-panel overlay-left">
-            <h1 class="title">
-              Hello <br />
-              friends
-            </h1>
-            <p>if you have an account, login here and have fun</p>
-            <button class="ghost" id="login">
-              Login
-              <i class="lni lni-arrow-left login"></i>
-            </button>
-          </div>
-          <div class="overlay-panel overlay-right">
-            <h1 class="title">
-              Start your <br />
-              journey now
-            </h1>
-            <p>
-              if you don`t have an account yet, join us and start your journey.
-            </p>
-            <button class="ghost" id="register">
-              Register
-              <i class="lni lni-arrow-right register"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="codelab2.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Penanganan klik pada tombol
+        $("#changeTextButton").click(function () {
+          $("#myDiv").text("Teks telah diubah!");
+          $("#myDiv").css("background-color", "lightgreen"); // Mengubah warna latar
+        });
+      });
+    </script>
   </body>
 </html>
