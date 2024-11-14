@@ -1,1 +1,2 @@
-MODUL4/DEMO/TUGAS[[:space:]]1/Your24Slides/assets/video/Design[[:space:]]Grafis.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+
