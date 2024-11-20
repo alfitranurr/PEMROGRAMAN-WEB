@@ -1052,7 +1052,7 @@ input {
   }
 }
 
-/* For tall screens on mobiles y desktop*/
+/* For tall screens on mobiles & desktop*/
 @media screen and (min-height: 721px) {
   body {
     margin: 0;

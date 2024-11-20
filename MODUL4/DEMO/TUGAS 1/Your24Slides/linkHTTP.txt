@@ -1,0 +1,1 @@
+http://localhost/MODUL4/DEMO/TUGAS%201/Your24Slides/backend/api/routes.php/products

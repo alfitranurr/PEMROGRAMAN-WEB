@@ -188,3 +188,43 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+const fetchProducts = async () => {
+  try {
+    const response = await fetch(
+      "http://localhost/MODUL4/DEMO/TUGAS%201/Your24Slides/backend/api/routes.php/products"
+    );
+    const products = await response.json();
+    const productContainer = document.querySelector(".place__container");
+
+    productContainer.innerHTML = ""; // Clear existing content
+
+    products.forEach((product) => {
+      const productHTML = `
+        <div class="place__card">
+          <img src="assets/img/${product.image}" alt="" class="place__img" />
+          <div class="place__content">
+            <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">4.8</span>
+            </span>
+            <div class="place__data">
+              <h3 class="place__title">${product.name}</h3>
+              <span class="place__subtitle">${product.description}</span>
+              <span class="place__price">$${product.price}</span>
+            </div>
+          </div>
+          <button class="button button--flex place__button">
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+      `;
+      productContainer.innerHTML += productHTML;
+    });
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
+};
+
+// Call the function to fetch and display products
+fetchProducts();
