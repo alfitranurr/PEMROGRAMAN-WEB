@@ -47,7 +47,7 @@ let swiper = new Swiper(".discover__container", {
   loop: true,
   spaceBetween: 32,
   coverflowEffect: {
-    rotate: 0,
+    rotate: -25,
   },
 });
 
@@ -118,7 +118,7 @@ window.addEventListener("scroll", scrollActive);
 const sr = ScrollReveal({
   distance: "60px",
   duration: 2800,
-  // reset: true,
+  reset: true,
 });
 
 sr.reveal(

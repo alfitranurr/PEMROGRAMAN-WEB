@@ -19,9 +19,6 @@ class ProductController
         return $data;
     }
 
-
-
-
     public function readById($id)
     {
         $query = "SELECT * FROM " . $this->table . " WHERE id = ?";
